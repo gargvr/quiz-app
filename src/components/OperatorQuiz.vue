@@ -3,11 +3,9 @@
     <div v-if="isQuizStarted">
       <h4>{{operandLeft}} {{operator}} {{operandRight}}</h4>
 
-      <button
-        @click="selectAnswer(answer)"
-        v-for="(answer, index) of answers"
-        :key="index"
-      >{{answer}}</button>
+      <button @click="selectAnswer(answer)" v-for="(answer, index) of answers" :key="index">
+        {{answer}}
+      </button>
     </div>
 
     <div v-if="!isQuizStarted">
